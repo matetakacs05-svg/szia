@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b94e63fc-6c87-46e5-9bbb-2e75c12e67d7" name="Changes" comment="css fájl létrehozva">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="8" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;redbirdjs&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/matetakacs05-svg/szia.git&quot;,
+    &quot;accountId&quot;: &quot;fb40bbc5-ed2a-443e-8e04-b8e884ece554&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3BzXCJ2HpdA81KNaFHFNjjpVPjY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "bun",
+    "last_opened_file_path": "C:/Users/gamep/repos/github/mate/szia/react3/src",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/gamep/.bun/bin/bun",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.runtime",
+    "ts.external.directory.path": "C:\\Users\\gamep\\repos\\github\\mate\\szia\\react3\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gamep\repos\github\mate\szia\react3\src" />
+      <recent name="C:\Users\gamep\repos\github\mate\szia\java2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gamep\repos\github\mate\szia\react3\public" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3bd3a6803838-JavaScript-WS-261.22158.274" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b94e63fc-6c87-46e5-9bbb-2e75c12e67d7" name="Changes" comment="" />
+      <created>1775492744110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775492744110</updated>
+      <workItem from="1775492745196" duration="3237000" />
+      <workItem from="1775565732719" duration="30000" />
+      <workItem from="1775577455488" duration="2818000" />
+      <workItem from="1775580617045" duration="1365000" />
+    </task>
+    <task id="LOCAL-00001" summary="Feladat 1 footer elem hozzáadva">
+      <option name="closed" value="true" />
+      <created>1775493372733</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775493372733</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feladat 2 txt és html fájl létrehozva">
+      <option name="closed" value="true" />
+      <created>1775579964535</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775579964536</updated>
+    </task>
+    <task id="LOCAL-00003" summary="javascript adatok lekérdezése">
+      <option name="closed" value="true" />
+      <created>1775580014372</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1775580014372</updated>
+    </task>
+    <task id="LOCAL-00004" summary="új adat felvétele">
+      <option name="closed" value="true" />
+      <created>1775580035132</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1775580035132</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adat törlése">
+      <option name="closed" value="true" />
+      <created>1775580052606</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1775580052606</updated>
+    </task>
+    <task id="LOCAL-00006" summary="adatok módosítása">
+      <option name="closed" value="true" />
+      <created>1775580059845</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1775580059845</updated>
+    </task>
+    <task id="LOCAL-00007" summary="css fájl létrehozva">
+      <option name="closed" value="true" />
+      <created>1775580073095</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1775580073095</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Feladat 1 footer elem hozzáadva" />
+    <MESSAGE value="feladat 2 txt és html fájl létrehozva" />
+    <MESSAGE value="javascript adatok lekérdezése" />
+    <MESSAGE value="új adat felvétele" />
+    <MESSAGE value="adat törlése" />
+    <MESSAGE value="adatok módosítása" />
+    <MESSAGE value="css fájl létrehozva" />
+    <option name="LAST_COMMIT_MESSAGE" value="css fájl létrehozva" />
+  </component>
+</project>
