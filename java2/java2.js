@@ -37,4 +37,9 @@ const hozzaadas = () => {
     tmb.push(`${datum}\t${nev}\t${helyszin}`);
     buildTable();
 }
+const torles = (idx) => {
+    tmb.splice(idx, 1);
+    buildTable();
+}
+
 fetchData();
