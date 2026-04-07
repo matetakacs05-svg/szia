@@ -4,6 +4,36 @@ import './App.css'
 function App() {
   const [tmb, setTmb] = useState<string[]>([]);
 
+  const fetchData = async () => {
+    const response = await fetch('gp.txt');
+    const data = (await response.text()).split('\n').slice(1);
+
+    setTmb(data);
+  }
+
+  const hozzaadas = () => {
+    const newTmb = [...tmb];
+
+    const datum = document.getElementById('datum') as HTMLInputElement;
+    const nev = document.getElementById('nev') as HTMLInputElement;
+    const helyszin = document.getElementById('helyszin') as HTMLInputElement;
+
+    newTmb.push(`${datum.value.replaceAll('-', '.')}\t${nev.value}\t${helyszin.value}`);
+
+    setTmb(newTmb);
+  }
+
+  const torles = (idx: number) => {
+    const newTmb = [...tmb];
+
+    newTmb.splice(idx, 1);
+    setTmb(newTmb);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <main>
       <form className="container">
