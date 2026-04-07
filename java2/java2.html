@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript CRUD</title>
+    <link rel="stylesheet" href="java2.css">
+</head>
+<body>
+    <form class="container">
+        <div>
+            <label for="datum">Dátum</label><br>
+            <input type="date" id="datum" name="datum" />
+        </div>
+        <div>
+            <label for="nev">Név</label><br>
+            <input type="text" id="nev" name="nev" />
+        </div>
+        <div>
+            <label for="helyszin">Helyszín</label><br>
+            <input type="text" id="helyszin" name="helyszin" />
+        </div>
+        <div id="gombok">
+            <button type="button" onclick="hozzaadas()">Új rekord</button>
+        </div>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Dátum</th><th>Név</th><th>Helyszín</th><th>Akciók</th>
+            </tr>
+        </thead>
+        <tbody id="adatok"></tbody>
+    </table>
+
+<script src="java2.js"></script>
+</body>
+</html>
