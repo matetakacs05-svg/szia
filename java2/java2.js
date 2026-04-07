@@ -29,4 +29,12 @@ const buildTable = () => {
     })
 }
 
+const hozzaadas = () => {
+    const datum = document.getElementById('datum').value;
+    const nev = document.getElementById('nev').value;
+    const helyszin = document.getElementById('helyszin').value;
+
+    tmb.push(`${datum}\t${nev}\t${helyszin}`);
+    buildTable();
+}
 fetchData();
