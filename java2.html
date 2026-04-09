@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CRUD App</title>
+</head>
+<body>
+
+  <h2>Simple CRUD App</h2>
+
+  <!-- Input -->
+  <input type="text" id="inputValue" placeholder="Enter value">
+  <button onclick="addItem()">Add</button>
+
+  <!-- List -->
+  <ul id="list"></ul>
+
+  <script>
+    let data = []; // Array to store values
+    let editIndex = -1;
+
+    function render() {
+      const list = document.getElementById("list");
+      list.innerHTML = "";
+
+      data.forEach((item, index) => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+          ${item}
+          <button onclick="editItem(${index})">Edit</button>
+          <button onclick="deleteItem(${index})">Delete</button>
+        `;
+
+        list.appendChild(li);
+      });
+    }
+
+    function addItem() {
+      const input = document.getElementById("inputValue");
+      const value = input.value.trim();
+
+      if (value === "") return;
+
+      if (editIndex === -1) {
+        // CREATE
+        data.push(value);
+      } else {
+        // UPDATE
+        data[editIndex] = value;
+        editIndex = -1;
+      }
+
+      input.value = "";
+      render();
+    }
+
+    function editItem(index) {
+      const input = document.getElementById("inputValue");
+
+      input.value = data[index];
+      editIndex = index;
+    }
+
+    function deleteItem(index) {
+      // DELETE
+      data.splice(index, 1);
+      render();
+    }
+
+    // Initial render
+    render();
+  </script>
+
+</body>
+</html>

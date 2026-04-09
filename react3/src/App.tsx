@@ -30,6 +30,55 @@ function App() {
     setTmb(newTmb);
   }
 
+  const [editIndex, setEditIndex] = useState<number | null>(null);
+  const modositas = (idx: number) => {
+    const sor = tmb[idx];
+    const cells = sor.split('\t');
+
+    const datum = document.getElementById('datum') as HTMLInputElement;
+    const nev = document.getElementById('nev') as HTMLInputElement;
+    const helyszin = document.getElementById('helyszin') as HTMLInputElement;
+
+    datum.value = cells[0].replaceAll('.', '-');
+    nev.value = cells[1];
+    helyszin.value = cells[2];
+  setEditIndex(idx);
+  } 
+
+  const modositasMentese = () => {
+  if (editIndex === null) return; // safety check
+
+  const newTmb = [...tmb];
+
+  const datum = document.getElementById('datum') as HTMLInputElement;
+  const nev = document.getElementById('nev') as HTMLInputElement;
+  const helyszin = document.getElementById('helyszin') as HTMLInputElement;
+
+  const updatedSor = `${datum.value.replaceAll('-', '.')}\t${nev.value}\t${helyszin.value}`;
+
+  newTmb[editIndex] = updatedSor;
+
+  setTmb(newTmb);
+  setEditIndex(null);
+
+  // clear inputs
+  datum.value = '';
+  nev.value = '';
+  helyszin.value = '';
+  }
+  const megse = () => {
+  setEditIndex(null);
+
+  const datum = document.getElementById('datum') as HTMLInputElement;
+  const nev = document.getElementById('nev') as HTMLInputElement;
+  const helyszin = document.getElementById('helyszin') as HTMLInputElement;
+
+  datum.value = '';
+  nev.value = '';
+  helyszin.value = '';
+}
+  
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -50,7 +99,14 @@ function App() {
           <input type="text" id="helyszin" name="helyszin"/>
         </div>
         <div id="gombok">
-          <button type="button" onClick={hozzaadas}>Új rekord</button>
+          {editIndex === null ? (
+            <button type="button" onClick={hozzaadas}> Új rekord </button>
+          ) : (
+            <>
+              <button type="button" onClick={modositasMentese}> Módosítás</button>
+              <button type="button" onClick={megse}> Mégse </button>
+            </>
+          )}
         </div>
       </form>
       <table>
@@ -72,6 +128,7 @@ function App() {
                 <td>{cells[1]}</td>
                 <td>{cells[2]}</td>
                 <td><button onClick={() => torles(idx)}>Törlés</button></td>
+                <td><button onClick={() => modositas(idx)}>Módosítás</button></td>
               </tr>
         })
         }
