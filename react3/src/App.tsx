@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
+  new TextDecoder('iso-8859-2')
   const [tmb, setTmb] = useState<string[]>([]);
 
   const fetchData = async () => {
@@ -46,7 +47,7 @@ function App() {
   } 
 
   const modositasMentese = () => {
-  if (editIndex === null) return; // safety check
+  if (editIndex === null) return; 
 
   const newTmb = [...tmb];
 
@@ -61,7 +62,6 @@ function App() {
   setTmb(newTmb);
   setEditIndex(null);
 
-  // clear inputs
   datum.value = '';
   nev.value = '';
   helyszin.value = '';

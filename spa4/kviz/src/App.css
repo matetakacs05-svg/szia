@@ -182,8 +182,3 @@
     border-right-color: var(--border);
   }
 }
-
-#adattabla{
-  display: flex;
-  text-align: center;
-}

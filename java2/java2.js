@@ -2,6 +2,7 @@ const adatok = document.getElementById('adatok');
 const gombok = document.getElementById('gombok');
 let tmb = [];
 
+
 const fetchData = async () => {
     const response = await fetch('gp.txt');
     const data = (await response.text()).split('\n').slice(1);
