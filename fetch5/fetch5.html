@@ -11,16 +11,23 @@
 <body>
 <form class="container">
     <div>
-        <label for="datum">Dátum</label><br>
-        <input type="date" id="datum" name="datum" />
-    </div>
-    <div>
         <label for="nev">Név</label><br>
-        <input type="text" id="nev" name="nev" />
+        <input type="text" id="nev" name="nev" required />
     </div>
     <div>
-        <label for="helyszin">Helyszín</label><br>
-        <input type="text" id="helyszin" name="helyszin" />
+        <label for="nem">Nem</label><br>
+        <select id="nem" name="nem" required>
+            <option value="F">Férfi</option>
+            <option value="N">Nő</option>
+        </select>
+    </div>
+    <div>
+        <label for="szuldatum">Szül dátum</label><br>
+        <input type="date" id="szuldatum" name="szuldatum" required />
+    </div>
+    <div>
+        <label for="nemzet">Nemzet</label><br>
+        <input type="text" id="nemzet" name="nemzet" />
     </div>
     <div id="gombok">
         <button type="button" onclick="hozzaadas()">Új rekord</button>

@@ -28,12 +28,23 @@ const buildTable = () => {
     })
 }
 
-const hozzaadas = () => {
-    const datum = document.getElementById('datum').value;
+const hozzaadas = async() => {
     const nev = document.getElementById('nev').value;
-    const helyszin = document.getElementById('helyszin').value;
+    const nem = document.getElementById('nem').value;
+    const szuldat = document.getElementById('szuldatum').value;
+    const nemzet = document.getElementById('nemzet').value;
 
-    tmb.push(`${datum}\t${nev}\t${helyszin}`);
+    const response = await fetch('/backend/api.php', {
+        method: 'post',
+        body: JSON.stringify({
+            nev, nem, szuldat, nemzet
+        })
+    });
+    const data = await response.json();
+
+    tmb.push({
+        az: data.newId, nev, nem, szuldat, nemzet
+    });
     buildTable();
 }
 

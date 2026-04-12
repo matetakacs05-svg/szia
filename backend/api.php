@@ -30,12 +30,12 @@ switch ($method) {
     case 'POST':
         try {
             $data = json_decode(file_get_contents("php://input"), true);
-            $stmt = $pdo->prepare("INSERT INTO users (name, email) VALUES (?, ?)");
-            $stmt->execute([$data['name'], $data['email']]);
-            echo json_encode(['status' => 'Create success!']);
+            $stmt = $pdo->prepare("INSERT INTO pilota (nev, nem, szuldat, nemzet) VALUES (?, ?, ?, ?)");
+            $stmt->execute([$data['nev'], $data['nem'], $data['szuldat'], $data['nemzet']]);
+            echo json_encode(['status' => 'Create success!', 'newId' => $pdo->lastInsertId()]);
         }
         catch(PDOException $e) {
-            echo json_encode(['status' => 'Create error!']);
+            echo json_encode(['status' => 'Create error!', 'error' => $e->getMessage()]);
         }
         break;
     case 'PUT':
