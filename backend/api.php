@@ -42,12 +42,12 @@ switch ($method) {
         try {
             $data = json_decode(file_get_contents("php://input"), true);
 
-            $stmt = $pdo->prepare("UPDATE users SET name=?, email=? WHERE id=?");
-            $stmt->execute([$data['name'], $data['email'], $data['id']]);
+            $stmt = $pdo->prepare("UPDATE pilota SET nev=?, nem=?, szuldat=?, nemzet=? WHERE az=?");
+            $stmt->execute([$data['data']['nev'], $data['data']['nem'], $data['data']['szuldat'], $data['data']['nemzet'], $data['az']]);
             echo json_encode(['status' => 'Update success!']);
         }
         catch(PDOException $e) {
-            echo json_encode(['status' => 'Update error!']);
+            echo json_encode(['status' => 'Update error!', 'error' => $e->getMessage()]);
         }
         break;
     case 'DELETE':
