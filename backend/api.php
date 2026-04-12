@@ -52,12 +52,12 @@ switch ($method) {
         break;
     case 'DELETE':
         try {
-            $stmt = $pdo->prepare("DELETE FROM users WHERE id=?");
-            $stmt->execute([$_GET['id']]);
+            $stmt = $pdo->prepare("DELETE FROM pilota WHERE az=?");
+            $stmt->execute([$_GET['az']]);
             echo json_encode(['status' => 'Delete success!']);
         }
         catch(PDOException $e) {
-            echo json_encode(['status' => 'Delete error!']);
+            echo json_encode(['status' => 'Delete error!', 'error' => $e->getMessage()]);
         }
         break;
 }

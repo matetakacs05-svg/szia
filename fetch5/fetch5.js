@@ -22,7 +22,7 @@ const buildTable = () => {
             tr.appendChild(td);
         }
         const td = document.createElement('td');
-        td.innerHTML = `<button onclick="modositas(${idx})">Módosítás</button><button onclick="torles(${idx})">Törlés</button>`
+        td.innerHTML = `<button onclick="modositas(${data.az})">Módosítás</button><button onclick="torles(${data.az})">Törlés</button>`
         tr.appendChild(td);
         adatok.appendChild(tr);
     })
@@ -79,7 +79,16 @@ const modositasMegse = () => {
     gombok.innerHTML = '<button onclick="hozzaadas()">Új rekord</button>';
 }
 
-const torles = (idx) => {
+const torles = async(az) => {
+    const response = await fetch(`/backend/api.php?az=${az}`, {
+        method: 'delete'
+    });
+
+    const data = await response.json();
+
+    console.log(data);
+
+    const idx = tmb.findIndex(d => d.az === az);
     tmb.splice(idx, 1);
     buildTable();
 }
