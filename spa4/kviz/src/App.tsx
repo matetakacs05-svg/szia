@@ -38,7 +38,7 @@ function App() {
       const data = (await response.text())
         .split("\n")
         .slice(1)
-        .map(line => line.split("\t")[2]);
+        .map(line => line.replace('\r', '').split("\t")[2]);
 
       setCountries(data);
     };
@@ -107,7 +107,7 @@ function App() {
     if (countries.length > 0 && round === 0) {
       nextRound();
     }
-  }, [countries]);
+  }, [countries, round, nextRound]);
 
   const newGame = () => {
     setScore(0);
