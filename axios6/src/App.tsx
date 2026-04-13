@@ -2,7 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import './App.css'
+
+interface Data {
+    az: number;
+    nev: string;
+    nem: string;
+    szuldat: string;
+    nemzet: string;
+}
 
 function App() {
   const [count, setCount] = useState(0)
