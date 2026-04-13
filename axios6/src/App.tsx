@@ -10,14 +10,29 @@ interface Data {
     nemzet: string;
 }
 
+const baseUrl = 'http://localhost:8888/backend/api.php';
+
 function App() {
     const [data, setData] = useState<Data[]>([]);
     const [editIdx, setEditIdx] = useState<number | null>(null);
 
+    const [nev, setNev] = useState('');
+    const [nem, setNem] = useState('');
+    const [szuldat, setSzuldat] = useState('');
+    const [nemzet, setNemzet] = useState('');
+
     const fetchData = async () => {
-        const response = await axios.get('/backend/api.php');
+        const response = await axios.get(baseUrl);
 
         setData(response.data.readData);
+    }
+
+    const hozzaadas = async() => {
+        const response = await axios.post(baseUrl, {
+            nev, nem, szuldat, nemzet
+        });
+
+        console.log(response.data);
     }
 
     useEffect(() => {
@@ -29,26 +44,26 @@ function App() {
           <form className={'container'}>
             <div>
                 <label htmlFor={'nev'}>Név</label><br/>
-                <input type={'text'} id={'nev'} name={'nev'} required />
+                <input type={'text'} id={'nev'} name={'nev'} value={nev} onChange={(e) => setNev(e.target.value)} required />
             </div>
             <div>
                 <label htmlFor={'nem'}>Nem</label><br/>
-                <select id={'nem'} name={'nem'}>
-                    <option value={''} disabled selected>Válassz...</option>
+                <select id={'nem'} name={'nem'} value={nem} onChange={(e) => setNem(e.target.value)} required>
+                    <option value={''} disabled>Válassz...</option>
                     <option value={'F'}>Férfi</option>
                     <option value={'N'}>Nő</option>
                 </select>
             </div>
             <div>
                 <label htmlFor={'szuldat'}>Szül. dátum</label>
-                <input type={'date'} id={'szuldat'} name={'szuldat'} required />
+                <input type={'date'} id={'szuldat'} name={'szuldat'} value={szuldat} onChange={(e) => setSzuldat(e.target.value)} required />
             </div>
             <div>
                 <label htmlFor={'nemzet'}>Nemzet</label>
-                <input type={'text'} id={'nemzet'} name={'nemzet'} required />
+                <input type={'text'} id={'nemzet'} name={'nemzet'} value={nemzet} onChange={(e) => setNemzet(e.target.value)} required />
             </div>
             { editIdx === null ?
-                <button type={'button'}>Hozzáadás</button>
+                <button type={'button'} onClick={hozzaadas}>Hozzáadás</button>
                 :
                 <>
                     <button type={'button'}>Módosítás</button>
