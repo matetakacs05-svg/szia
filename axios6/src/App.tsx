@@ -1,7 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
@@ -15,7 +11,18 @@ interface Data {
 }
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [data, setData] = useState<Data[]>([]);
+    const [editIdx, setEditIdx] = useState<number | null>(null);
+
+    const fetchData = async () => {
+        const response = await axios.get('/backend/api.php');
+
+        setData(response.data.readData);
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, []);
 
   return (
     <>
