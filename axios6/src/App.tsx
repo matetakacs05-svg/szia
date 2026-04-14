@@ -41,6 +41,14 @@ function App() {
         setData(newData);
     }
 
+    const torles = async(az: number, idx: number) => {
+        await axios.delete(`${baseUrl}?az=${az}`);
+
+        const newData = [...data];
+        newData.splice(idx, 1);
+        setData(newData);
+    }
+
     useEffect(() => {
         fetchData();
     }, []);
@@ -89,7 +97,7 @@ function App() {
                         <td>{d.az}</td><td>{d.nev}</td><td>{d.nem}</td><td>{d.szuldat}</td><td>{d.nemzet}</td>
                         <td>
                             <button type={'button'}>Módosítás</button>
-                            <button type={'button'}>Törlés</button>
+                            <button type={'button'} onClick={() => torles(d.az, idx)}>Törlés</button>
                         </td>
                     </tr>
                 )) }
