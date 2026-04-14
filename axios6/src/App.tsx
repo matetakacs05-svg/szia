@@ -41,6 +41,37 @@ function App() {
         setData(newData);
     }
 
+    const modositas = (idx: number) => {
+        setEditIdx(idx);
+
+        const details = data[idx];
+        setNev(details.nev);
+        setNem(details.nem);
+        setSzuldat(details.szuldat);
+        setNemzet(details.nemzet);
+    }
+
+    const modositasMegerosites = async() => {
+        const details = {
+            az: data[editIdx!].az, data: { nev, nem, szuldat, nemzet }
+        }
+
+        await axios.put(baseUrl, details);
+
+        const newData = [...data];
+        newData[editIdx!] = { ...details.data, az: details.az };
+        setData(newData);
+        setEditIdx(null);
+    }
+
+    const modositasMegse = () => {
+        setEditIdx(null);
+        setNev('');
+        setNem('');
+        setSzuldat('');
+        setNemzet('');
+    }
+
     const torles = async(az: number, idx: number) => {
         await axios.delete(`${baseUrl}?az=${az}`);
 
@@ -80,8 +111,8 @@ function App() {
                 <button type={'button'} onClick={hozzaadas}>Hozzáadás</button>
                 :
                 <>
-                    <button type={'button'}>Módosítás</button>
-                    <button type={'button'}>Mégse</button>
+                    <button type={'button'} onClick={modositasMegerosites}>Módosítás</button>
+                    <button type={'button'} onClick={modositasMegse}>Mégse</button>
                 </>
             }
           </form>
@@ -96,7 +127,7 @@ function App() {
                     <tr key={idx}>
                         <td>{d.az}</td><td>{d.nev}</td><td>{d.nem}</td><td>{d.szuldat}</td><td>{d.nemzet}</td>
                         <td>
-                            <button type={'button'}>Módosítás</button>
+                            <button type={'button'} onClick={() => modositas(idx)}>Módosítás</button>
                             <button type={'button'} onClick={() => torles(d.az, idx)}>Törlés</button>
                         </td>
                     </tr>
