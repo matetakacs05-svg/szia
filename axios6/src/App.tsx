@@ -28,11 +28,17 @@ function App() {
     }
 
     const hozzaadas = async() => {
-        const response = await axios.post(baseUrl, {
+        const details = {
             nev, nem, szuldat, nemzet
-        });
+        };
 
-        console.log(response.data);
+        const response = await axios.post(baseUrl, details);
+
+        const newData = [...data, {
+            az: response.data.newId as number, ...details
+        }];
+
+        setData(newData);
     }
 
     useEffect(() => {
@@ -81,6 +87,10 @@ function App() {
                 { data.map((d, idx) => (
                     <tr key={idx}>
                         <td>{d.az}</td><td>{d.nev}</td><td>{d.nem}</td><td>{d.szuldat}</td><td>{d.nemzet}</td>
+                        <td>
+                            <button type={'button'}>Módosítás</button>
+                            <button type={'button'}>Törlés</button>
+                        </td>
                     </tr>
                 )) }
               </tbody>
