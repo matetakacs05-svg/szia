@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b94e63fc-6c87-46e5-9bbb-2e75c12e67d7" name="Changes" comment="css fájl létrehozva">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oojs7/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java2/java2.css" beforeDir="false" afterPath="$PROJECT_DIR$/java2/java2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java2/java2.html" beforeDir="false" afterPath="$PROJECT_DIR$/java2/java2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react3/public/gp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/react3/public/gp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spa4/kviz/public/gp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/spa4/kviz/public/gp.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="8" />
+    <option name="cachedIndexableFilesCount" value="56" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -60,17 +68,21 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "javascript.preferred.runtime.type.id": "bun",
-    "last_opened_file_path": "C:/Users/gamep/repos/github/mate/szia/react3/src",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/takac/Documents/GitHub/szia1",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/gamep/.bun/bin/bun",
+    "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.javascript.runtime",
+    "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "C:\\Users\\gamep\\repos\\github\\mate\\szia\\react3\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -87,7 +99,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3bd3a6803838-JavaScript-WS-261.22158.274" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PS-253.31033.138" />
+        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.31033.138" />
       </set>
     </attachedChunks>
   </component>
@@ -102,6 +115,7 @@
       <workItem from="1775565732719" duration="30000" />
       <workItem from="1775577455488" duration="2818000" />
       <workItem from="1775580617045" duration="1365000" />
+      <workItem from="1776347728272" duration="3374000" />
     </task>
     <task id="LOCAL-00001" summary="Feladat 1 footer elem hozzáadva">
       <option name="closed" value="true" />
