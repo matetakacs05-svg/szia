@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import "./kviz.css";
 
 function App() {
   const [countries, setCountries] = useState<string[]>([]);
@@ -97,7 +97,7 @@ function App() {
     setScore(prev => prev + points);
 
     setLastResult(
-      `${answer === isCorrect ? "✅ Correct" : "❌ Wrong"} | +${points} points`
+      `${answer === isCorrect ? "Correct" : "❌ Wrong"} | +${points} points`
     );
 
     setWaitingNext(true);
