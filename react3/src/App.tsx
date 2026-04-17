@@ -84,55 +84,60 @@ function App() {
 
   return (
     <main>
-      <form className="container">
-        <div>
-          <label htmlFor="datum">Dátum</label><br/>
-          <input type="date" id="datum" name="datum"/>
-        </div>
-        <div>
-          <label htmlFor="nev">Név</label><br/>
-          <input type="text" id="nev" name="nev"/>
-        </div>
-        <div>
-          <label htmlFor="helyszin">Helyszín</label><br/>
-          <input type="text" id="helyszin" name="helyszin"/>
-        </div>
-        <div id="gombok">
-          {editIndex === null ? (
-            <button type="button" onClick={hozzaadas}> Új rekord </button>
-          ) : (
-            <>
-              <button type="button" onClick={modositasMentese}> Módosítás</button>
-              <button type="button" onClick={megse}> Mégse </button>
-            </>
-          )}
-        </div>
-      </form>
-      <table>
-        <thead>
-        <tr>
-          <th>Dátum</th>
-          <th>Név</th>
-          <th>Helyszín</th>
-          <th>Akciók</th>
-        </tr>
-        </thead>
-        <tbody id="adatok">
-        {
-          tmb.map((sor, idx) => {
-            const cells = sor.split('\t');
+    <video autoPlay loop muted playsInline className="bg-video">
+      <source src="bgv.mp4" type="video/mp4" />
+    </video>
+      <div id="content">
+        <form className="container">
+          <div>
+            <label htmlFor="datum">Dátum</label><br/>
+            <input type="date" id="datum" name="datum"/>
+          </div>
+          <div>
+            <label htmlFor="nev">Név</label><br/>
+            <input type="text" id="nev" name="nev"/>
+          </div>
+          <div>
+            <label htmlFor="helyszin">Helyszín</label><br/>
+            <input type="text" id="helyszin" name="helyszin"/>
+          </div>
+          <div id="gombok">
+            {editIndex === null ? (
+              <button type="button" onClick={hozzaadas}> Új rekord </button>
+            ) : (
+              <>
+                <button type="button" onClick={modositasMentese}> Módosítás</button>
+                <button type="button" onClick={megse}> Mégse </button>
+              </>
+            )}
+          </div>
+        </form>
+        <table>
+          <thead>
+          <tr>
+            <th>Dátum</th>
+            <th>Név</th>
+            <th>Helyszín</th>
+            <th>Akciók</th>
+          </tr>
+          </thead>
+          <tbody id="adatok">
+          {
+            tmb.map((sor, idx) => {
+              const cells = sor.split('\t');
 
-            return <tr key={idx}>
-                <td>{cells[0]}</td>
-                <td>{cells[1]}</td>
-                <td>{cells[2]}</td>
-                <td><button onClick={() => torles(idx)}>Törlés</button></td>
-                <td><button onClick={() => modositas(idx)}>Módosítás</button></td>
-              </tr>
-        })
-        }
-        </tbody>
-      </table>
+              return <tr key={idx}>
+                  <td>{cells[0]}</td>
+                  <td>{cells[1]}</td>
+                  <td>{cells[2]}</td>
+                  <td><button onClick={() => torles(idx)}>Törlés</button></td>
+                  <td><button onClick={() => modositas(idx)}>Módosítás</button></td>
+                </tr>
+          })
+          }
+          </tbody>
+        </table>
+      </div>
     </main>
   )
 }
