@@ -84,6 +84,27 @@ button:active {
 #root{
   border: 0px;
 }
+.nav {
+    max-width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+.nav-item {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.nav-item:hover {
+    background: #5a5a5a;
+}
 
 
 

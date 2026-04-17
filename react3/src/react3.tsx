@@ -84,6 +84,16 @@ function App() {
 
   return (
     <main>
+    <div className="nav">
+      <nav>
+        <a className="nav-item" href="/java2/java2.html">Java 2</a>
+        <a className="nav-item" href="/react3/dist/index.html">React 3</a>
+        <a className="nav-item" href="/spa4/dist/index.html">SPA 4</a>
+        <a className="nav-item" href="/fetch5/fetch5.html">Fetch 5</a>
+        <a className="nav-item" href="/axios6/dist/index.html">Axios 6</a>
+        <a className="nav-item" href="/oojs7/oojs7.html">OOJS 7</a>
+      </nav>
+    </div>
     <video autoPlay loop muted playsInline className="bg-video">
       <source src="bgv.mp4" type="video/mp4" />
     </video>
