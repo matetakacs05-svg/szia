@@ -52,7 +52,7 @@ canvas {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 0;
     background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);

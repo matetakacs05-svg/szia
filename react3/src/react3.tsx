@@ -86,6 +86,7 @@ function App() {
     <main>
     <div className="nav">
       <nav>
+        <a className="nav-item" href="/index.html">Főoldal</a>
         <a className="nav-item" href="/java2/java2.html">Java 2</a>
         <a className="nav-item" href="/react3/dist/index.html">React 3</a>
         <a className="nav-item" href="/spa4/dist/index.html">SPA 4</a>
